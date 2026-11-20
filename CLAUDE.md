@@ -6,7 +6,7 @@
 
 1. **Langue** :
    - **en français** : les conversations, les docstrings, les commentaires, les documents de cadrage ;
-   - **en anglais** : les noms de fonctions, de variables, de classes, de modules et de fichiers de code.
+   - **en anglais** : les noms de fonctions, de variables, de classes, de modules et de fichiers de code, ainsi que **les messages de commit**.
 2. **Style** : méthodique, structuré, explicite. Sections numérotées, listes, tableaux. Aucune étape implicite.
 3. **Challenger** : signaler les tensions, risques et alternatives plutôt que valider sans discussion.
 4. **Décisions** : les choix appartiennent à l'autrice. Proposer une recommandation, puis attendre la validation avant de la noter comme décidée.
@@ -78,9 +78,10 @@ tests/
 - 2 tests (`tests/test_cli.py`). Lint, types et tests passent.
 - Adresse e-mail : l'adresse dev de l'autrice est utilisée dans `pyproject.toml` et dans la config Git locale du dépôt (`git config --local user.email`). Jamais l'adresse perso.
 - Typer passé en [Décidé].
+- Initialisation commitée (`8cf90ea`).
 
 ### Pas encore fait
-1. **Commit de l'initialisation** : en attente du feu vert de l'autrice.
+1. **Publication sur GitHub** : l'autrice pousse elle-même le dépôt.
 
 ### Prochaine étape
 - Spécifier P2P en détail, en commençant par **le format de `palette.yaml`**.
