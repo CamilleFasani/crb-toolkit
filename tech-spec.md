@@ -14,7 +14,7 @@ Légende : **[Décidé]** · **[Piste]** · **[Ouvert]** · **[Écarté]**
   ├── README.md
   ├── docs/            → spécification de chaque outil
   ├── src/crb_toolkit/
-  │   ├── commun/      → photo, EXIF, couleurs, SVG
+  │   ├── common/      → photo, EXIF, couleurs, SVG
   │   ├── p2p/
   │   ├── p2c/
   │   └── p2t/
@@ -26,7 +26,9 @@ Légende : **[Décidé]** · **[Piste]** · **[Ouvert]** · **[Écarté]**
 - **[Décidé]** pytest (tests).
 - **[Décidé]** uv (gestion de Python, des dépendances, de l'environnement).
 - **[Décidé]** mypy en mode strict (assouplissement ciblé possible sur numpy).
-- **[Ouvert]** pydantic pour valider le format de `palette.yaml` (contrat entre P2P et P2C).
+- **[Décidé]** Typer pour la ligne de commande (basé sur les annotations de type ; préféré à argparse, plus verbeux).
+- **[Décidé]** Python 3.13.
+- **[Décidé]** pydantic pour valider le format de `palette.yaml` (contrat entre P2P et P2C).
 
 ## 3. Contrat partagé
 - **[Décidé]** Le format de `palette.yaml` est le contrat entre P2P et P2C. Toute modification est faite dans un seul commit, avec tests.

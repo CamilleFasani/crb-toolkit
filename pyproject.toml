@@ -1,0 +1,50 @@
+[project]
+name = "crb-toolkit"
+version = "0.1.0"
+description = "A toolkit for capturing the beauty of reality – at least trying to."
+readme = "README.md"
+authors = [
+    { name = "Pressense Fasani", email = "cfasani.dev@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.14.4",
+    "typer>=0.29.2",
+]
+
+[project.scripts]
+crb = "crb_toolkit.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E", "W",  # pycodestyle : style de base
+    "F",       # pyflakes : erreurs (imports inutilisés, noms inconnus…)
+    "I",       # isort : ordre des imports
+    "B",       # bugbear : pièges courants
+    "UP",      # pyupgrade : syntaxe Python moderne
+    "N",       # pep8-naming : conventions de nommage
+    "SIM",     # simplifications possibles
+]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

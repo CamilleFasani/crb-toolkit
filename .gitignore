@@ -1,0 +1,17 @@
+# Environnement Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Caches des outils
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Build
+dist/
+build/
+
+# Secrets et données personnelles
+.env
+photos/
