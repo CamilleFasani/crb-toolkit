@@ -29,6 +29,8 @@ Légende : **[Décidé]** · **[Piste]** · **[Ouvert]** · **[Écarté]**
 - **[Décidé]** Typer pour la ligne de commande (basé sur les annotations de type ; préféré à argparse, plus verbeux).
 - **[Décidé]** Python 3.13.
 - **[Décidé]** pydantic pour valider le format de `palette.yaml` (contrat entre P2P et P2C).
+- **[Décidé]** matplotlib pour l'interface de sélection des couleurs de P2P (fenêtre avec rectangles tracés à la souris). Affichage sous WSL2 via WSLg (présent).
+- **[Piste]** Plus tard : k-means (scikit-learn ou numpy « fait main ») pour suggérer une palette. Pas en v1.
 
 ## 3. Contrat partagé
 - **[Décidé]** Le format de `palette.yaml` est le contrat entre P2P et P2C. Toute modification est faite dans un seul commit, avec tests.

@@ -20,7 +20,7 @@
 | Commande | Outil | Entrée | Sortie |
 |---|---|---|---|
 | `crb p2p` | P2P - From Photo to Palette | Photo | `palette.yaml` |
-| `crb p2c` | P2C - From Palette to Canvas | Palette (+ photo selon le mode) | SVG impressionniste |
+| `crb p2c` | P2C - From Palette to Canvas | Palette | SVG impressionniste |
 | `crb p2t` | P2T - From Photo to Texture | Photo | SVG de texture |
 
 ## 3. Documents de cadrage (à lire avant toute décision)
@@ -69,7 +69,7 @@ tests/
 3. **Reproductibilité** : même entrée + mêmes réglages (graine aléatoire fixe) = même sortie.
 4. **Le format de `palette.yaml` est un contrat** : toute modification touche P2P et P2C dans le même commit, avec tests.
 
-## 7. État d'avancement (au 2026-11-20)
+## 7. État d'avancement (au 2026-11-24)
 
 ### Fait
 - Docs de cadrage (commit initial `2c572bf`, auteur corrigé : adresse dev).
@@ -79,9 +79,9 @@ tests/
 - Adresse e-mail : l'adresse dev de l'autrice est utilisée dans `pyproject.toml` et dans la config Git locale du dépôt (`git config --local user.email`). Jamais l'adresse perso.
 - Typer passé en [Décidé].
 - Initialisation commitée (`8cf90ea`).
-
-### Pas encore fait
-1. **Publication sur GitHub** : l'autrice pousse elle-même le dépôt.
+- Dépôt publié sur GitHub (`origin`, branche `main`).
+- P2P spécifié (`docs/p2p.md`) : sélection 100 % manuelle (rectangles dans une fenêtre matplotlib, 2 à 8 couleurs, médiane), format v1 de `palette.yaml` décidé (`version`, `story`, `colors` : `hex`, `region`, `story`).
+- P2C réduit au mode abstrait (mode figuratif écarté) ; P2C ne lit plus de photo.
 
 ### Prochaine étape
-- Spécifier P2P en détail, en commençant par **le format de `palette.yaml`**.
+- Écrire le modèle pydantic du format v1 de `palette.yaml`, avec ses tests (mode « Je code »).

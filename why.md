@@ -12,7 +12,7 @@
 | Outil | Signification          | Entrée                          | Sortie              |
 | ----- | ---------------------- | ------------------------------- | ------------------- |
 | P2P   | From Photo to Palette  | Photo                           | `palette.yaml`      |
-| P2C   | From Palette to Canvas | Palette (+ photo selon le mode) | SVG impressionniste |
+| P2C   | From Palette to Canvas | Palette                         | SVG impressionniste |
 | P2T   | From Photo to Texture  | Photo                           | SVG de texture      |
 
 ## 3. Intentions
